@@ -3,7 +3,7 @@ This package implements a simple time-lapse tile scanner for ScanImage.
 It uses linear stages controlled externally to ScanImage. 
 We implemented this because we wanted to move the sample on an X/Y stage separate to that which ScanImage controlled.
 The software is very specific to our use-case but might be helpful for others. 
-
+Based upon our [motion control](https://github.com/BaselLaserMouse/MotionControl) package. 
 
 ## Example session
 
