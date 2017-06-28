@@ -1,0 +1,8 @@
+sample: {ID: '', objectiveName: nikon 16x}
+mosaic:
+  scanmode: tile
+  sectionStartNum: 1.0
+  sampleSize: {X: 6.5, Y: 10.1}
+  numSections: 1.0
+  numOpticalPlanes: 2.0
+  overlapProportion: 0.07
