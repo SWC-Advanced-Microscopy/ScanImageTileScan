@@ -1,9 +1,18 @@
 # ScanImage TileScanner
-This package implements a simple time-lapse tile scanner for ScanImage.
-It uses linear stages controlled externally to ScanImage. 
-We implemented this because we wanted to move the sample on an X/Y stage separate to that which ScanImage controlled.
-The software is very specific to our use-case but might be helpful for others. 
-Based upon our [motion control](https://github.com/BaselLaserMouse/MotionControl) package. 
+This package implements a simple time-lapse tile scanner for [ScanImage](https://vidriotechnologies.com).
+The package defines a class called `tiler` that is a wrapper around ScanImage.
+`Tiler` sets up tile coordinates, moves an X/Y stage, and instructs ScanImage to take images. 
+Image acquisition is performed partly via a ScanImage user-function. 
+Multiple repeats (called "sections") of the same tile region can be obtained. 
+This allows for things like time-lapse imaging of morphological changes in large brain slices. 
+
+## Limitations
+Our approach is useful only for specific cases. 
+For instance, we implemented our own [motion control](https://github.com/BaselLaserMouse/MotionControl) classes for this project as we wanted the sample stage to indepedent from the ScanImage-controlled stage. 
+This has the disadvantage that you will need to write your own control code if you don't use the PI C-891 motion controller, as we did here. 
+However, it has the advantage that you can set up your system in a very open-ended manner. 
+Also note that some settings (e.g. the imagaing depth) are hard-coded. 
+
 
 ## Example session
 
