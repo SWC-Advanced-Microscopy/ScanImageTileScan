@@ -8,7 +8,7 @@ This allows for things like time-lapse imaging of morphological changes in large
 
 ## Limitations
 Our approach is useful only for specific cases. 
-For instance, we implemented our own [motion control](https://github.com/BaselLaserMouse/MotionControl) classes for this project as we wanted the sample stage to indepedent from the ScanImage-controlled stage. 
+For instance, we implemented our own [motion control](https://github.com/BaselLaserMouse/MotionControl) classes for this project as we wanted the sample stage to move indepedently from the ScanImage-controlled stage. 
 This has the disadvantage that you will need to write your own control code if you don't use the PI C-891 motion controller, as we did here. 
 However, it has the advantage that you can set up your system in a very open-ended manner. 
 Also note that some settings (e.g. the imagaing depth) are hard-coded. 
